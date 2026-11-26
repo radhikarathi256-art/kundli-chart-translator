@@ -1,0 +1,42 @@
+{
+ "ascendantSign": 3,
+ "planets": [
+  {
+   "name": "Sun",
+   "sign": 9
+  },
+  {
+   "name": "Moon",
+   "sign": 9
+  },
+  {
+   "name": "Mars",
+   "sign": 2
+  },
+  {
+   "name": "Mercury",
+   "sign": 9
+  },
+  {
+   "name": "Jupiter",
+   "sign": 4
+  },
+  {
+   "name": "Venus",
+   "sign": 9
+  },
+  {
+   "name": "Saturn",
+   "sign": 10,
+   "retro": true
+  },
+  {
+   "name": "Rahu",
+   "sign": 10
+  },
+  {
+   "name": "Ketu",
+   "sign": 4
+  }
+ ]
+}

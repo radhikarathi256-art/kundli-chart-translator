@@ -1,0 +1,120 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "chart": "north_indian",
+  "person": "Sample",
+  "lagnaSign": 3,
+  "lagnaName": "Mithun",
+  "houses": [
+    {
+      "house": 1,
+      "sign": 3,
+      "planets": []
+    },
+    {
+      "house": 2,
+      "sign": 4,
+      "planets": [
+        {
+          "id": "Ju",
+          "degree": 14,
+          "retro": false
+        },
+        {
+          "id": "Ke",
+          "degree": 2,
+          "retro": false
+        }
+      ]
+    },
+    {
+      "house": 3,
+      "sign": 5,
+      "planets": []
+    },
+    {
+      "house": 4,
+      "sign": 6,
+      "planets": []
+    },
+    {
+      "house": 5,
+      "sign": 7,
+      "planets": []
+    },
+    {
+      "house": 6,
+      "sign": 8,
+      "planets": []
+    },
+    {
+      "house": 7,
+      "sign": 9,
+      "planets": [
+        {
+          "id": "Su",
+          "degree": 3,
+          "retro": false
+        },
+        {
+          "id": "Mo",
+          "degree": 9,
+          "retro": false
+        },
+        {
+          "id": "Me",
+          "degree": 21,
+          "retro": false
+        },
+        {
+          "id": "Ve",
+          "degree": 27,
+          "retro": false
+        }
+      ]
+    },
+    {
+      "house": 8,
+      "sign": 10,
+      "planets": [
+        {
+          "id": "Sa",
+          "degree": 1,
+          "retro": true
+        },
+        {
+          "id": "Ra",
+          "degree": 2,
+          "retro": false
+        }
+      ]
+    },
+    {
+      "house": 9,
+      "sign": 11,
+      "planets": []
+    },
+    {
+      "house": 10,
+      "sign": 12,
+      "planets": []
+    },
+    {
+      "house": 11,
+      "sign": 1,
+      "planets": []
+    },
+    {
+      "house": 12,
+      "sign": 2,
+      "planets": [
+        {
+          "id": "Ma",
+          "degree": 18,
+          "retro": false
+        }
+      ]
+    }
+  ]
+}

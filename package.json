@@ -1,0 +1,7 @@
+{
+  "name": "kundli-chart-translator",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "kundli-chart-translator.js",
+  "scripts": { "test": "node test.js" }
+}
