@@ -55,6 +55,10 @@ export const SIGNS = ['Mesha', 'Vrishabh', 'Mithun', 'Karka', 'Simha', 'Kanya',
 
 export const PLANETS = ['Su', 'Mo', 'Ma', 'Me', 'Ju', 'Ve', 'Sa', 'Ra', 'Ke']; // draw order in a house
 
+// What each house stands for, shown as a small label under the sign number.
+export const HOUSE_MEANINGS = ['Self', 'Wealth', 'Courage', 'Home', 'Children', 'Health',
+  'Marriage', 'Change', 'Luck', 'Career', 'Gains', 'Loss']; // index + 1 = house
+
 // Chart is 320×320; board is 300×300 at (10,10). Same layout for both themes.
 const SIZE = 320;
 const BOARD = { x: 10, y: 10, w: 300, r: 8 };
@@ -581,12 +585,16 @@ export function renderChartSvg(chart, { theme = 'marriage', highlightLagna = fal
   // LAGNA label in house 1
   parts.push(`<g transform="translate(${r2(ASSETS.lagna.x)} ${r2(ASSETS.lagna.y)})">${fill(ASSETS.lagna.svg, colours)}</g>`);
 
+  const FONT = '-apple-system, Inter, Helvetica, Arial, sans-serif';
   for (const hs of chart.houses) {
-    // rashi symbol
+    // sign number + house meaning (Vedic style: the number in a house is its sign)
     const sign = SIGNS[hs.sign - 1];
     const [gx, gy] = RASHI_SLOT[hs.house];
-    parts.push(`<g transform="translate(${gx} ${gy})" data-house="${hs.house}" data-sign="${sign}">`
-      + fill(ASSETS.rashi[sign].svg, { ...colours, p: `${idPrefix}-r${hs.house}-` }) + '</g>');
+    const cx = gx + 5.5, cy = gy + 5.5;
+    parts.push(`<g data-house="${hs.house}" data-sign="${sign}" font-family="${FONT}" text-anchor="middle" fill="${t.rashi}">`
+      + `<text x="${cx}" y="${cy + 3.5}" font-size="10" font-weight="700">${hs.sign}</text>`
+      + `<text x="${cx}" y="${cy + 12.5}" font-size="5.5" font-weight="600" letter-spacing="0.5" opacity="0.75">${HOUSE_MEANINGS[hs.house - 1].toUpperCase()}</text>`
+      + '</g>');
 
     // planets
     if (!hs.planets.length) continue;
